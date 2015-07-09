@@ -1,0 +1,1675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Oracle -" uuid="34607937-2d4a-4efb-8984-d457c8c90181">
+    <database-info product="Oracle" version="Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production&#xa;With the Partitioning, OLAP, Data Mining and Real Application Testing options" jdbc-version="11.2" driver-name="Oracle JDBC driver" driver-version="11.2.0.3.0">
+      <extra-name-characters>$#</extra-name-characters>
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="BOBJ_DWH" catalog=""/>
+    <table name="ADM_AKCIJA" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SIFRA" sqlType="VARCHAR2" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NAZIV" sqlType="VARCHAR2" precision="60" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VALIDAN" sqlType="VARCHAR2" precision="1" scale="0" nullable="false" jdbcType="12" def="J0QnICAgICAgICAgICAgICAgICAgIA=="/>
+    </table>
+    <table name="ADM_DBMSGRESKA" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="TEKST" sqlType="VARCHAR2" precision="500" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ENGTEKST" sqlType="VARCHAR2" precision="500" scale="0" nullable="false" jdbcType="12"/>
+    </table>
+    <table name="ADM_KORISNIK" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SIFRA" sqlType="VARCHAR2" precision="6" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NAZIV" sqlType="VARCHAR2" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="LOZINKA" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ADMIN" sqlType="VARCHAR2" precision="1" scale="0" nullable="false" jdbcType="12" def="J04nICAgICAgICAgICAgICAgICAgIA=="/>
+      <column name="MRC" sqlType="VARCHAR2" precision="2" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALIDAN" sqlType="VARCHAR2" precision="1" scale="0" nullable="false" jdbcType="12" def="J0QnICAgICAgICAgICAgICAgICAgIA=="/>
+    </table>
+    <table name="ADM_KORISNIKAKCIJA" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="ADM_KORISNIK" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="ADM_AKCIJA" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+    </table>
+    <table name="ADM_KORISNIKORGJED" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="ADM_KORISNIK" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="ADM_ORGJED" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="ADM_MODUL" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+    </table>
+    <table name="ADM_KORISNIKROLA" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="ADM_KORISNIK" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="ADM_ROLA" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+    </table>
+    <table name="ADM_MENU" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SIFRA" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NAZIV" sqlType="VARCHAR2" precision="1000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PAREN_ID" sqlType="NUMBER" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="REDNIBROJ" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="LINK" sqlType="VARCHAR2" precision="1000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ADM_AKCIJA" sqlType="VARCHAR2" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ADM_MODUL" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="VALIDAN" sqlType="VARCHAR2" precision="1" scale="0" nullable="false" jdbcType="12" def="J0QnICAgICAgICAgICAgICAgICAgIA=="/>
+    </table>
+    <table name="ADM_MODUL" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SIFRA" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NAZIV" sqlType="VARCHAR2" precision="60" scale="0" nullable="false" jdbcType="12"/>
+      <column name="HTMLDB_APP_ID" sqlType="NUMBER" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="VALIDAN" sqlType="VARCHAR2" precision="1" scale="0" nullable="false" jdbcType="12" def="J0QnICAgICAgICAgICAgICAgICAgIA=="/>
+    </table>
+    <table name="ADM_PORUKA" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SIFRA" sqlType="VARCHAR2" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="TEKST" sqlType="VARCHAR2" precision="500" scale="0" nullable="false" jdbcType="12"/>
+    </table>
+    <table name="ADM_ROLA" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SIFRA" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NAZIV" sqlType="VARCHAR2" precision="60" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VALIDAN" sqlType="VARCHAR2" precision="1" scale="0" nullable="false" jdbcType="12" def="J0QnICAgICAgICAgICAgICAgICAgIA=="/>
+    </table>
+    <table name="ADM_ROLAAKCIJA" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="ADM_ROLA" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="ADM_AKCIJA" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+    </table>
+    <table name="AGGREGATE_OUTAGE" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="PERIOD_START" sqlType="VARCHAR2" precision="20" scale="0" nullable="false" jdbcType="12" version="true"/>
+      <column name="PERIOD_END" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12" version="true"/>
+      <column name="DATUM" sqlType="VARCHAR2" precision="10" scale="0" nullable="true" jdbcType="12" version="true"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3" version="true"/>
+      <primary-key name="AGGREGATE_OUTAGE_PK" columns="PARTY,PERIOD_START"/>
+    </table>
+    <table name="ALLOC_MODE" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="ALLOC_MODE" sqlType="CHAR" precision="3" scale="0" nullable="false" jdbcType="1"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="MARKET" sqlType="VARCHAR2" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <primary-key name="ALLOC_MODE_PK" columns="ALLOC_MODE"/>
+    </table>
+    <table name="ALLOC_MODE2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="ALLOC_MODE" sqlType="CHAR" precision="3" scale="0" nullable="false" jdbcType="1"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="MARKET" sqlType="VARCHAR2" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+    </table>
+    <table name="ALLOC_MODE_HIER2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="HIERNAME" sqlType="CHAR" precision="12" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HIER_LABEL" sqlType="CHAR" precision="16" scale="0" nullable="true" jdbcType="1"/>
+      <column name="NODEID" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="IOBJNM" sqlType="VARCHAR2" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NODENAME" sqlType="VARCHAR2" precision="46" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TLEVEL" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PARENTID" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="MEDIUM_LABEL" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="APOINT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="APOINT" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12" version="true"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12" version="true"/>
+      <column name="VALID_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1" def="JzE5MDAtMDEtMDEgMDA6MDA6MDAn" version="true"/>
+      <column name="VALID_END" sqlType="CHAR" precision="19" scale="0" nullable="true" jdbcType="1" def="JzI5OTktMDEtMDEgMDA6MDA6MDAn" version="true"/>
+      <column name="DSO_TSO" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12" version="true"/>
+      <column name="P_ODOB" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3" version="true"/>
+      <column name="P_NOM" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3" version="true"/>
+      <column name="MPP_COUNT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3" version="true"/>
+      <column name="TSO_JOIN_APOINT" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12" version="true"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="500" scale="0" nullable="true" jdbcType="12" version="true"/>
+      <primary-key name="APOINT_PK" columns="APOINT,VALID_START"/>
+    </table>
+    <table name="APOINT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="APOINT" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="APOINT_NAME" sqlType="VARCHAR2" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DSO_TSO" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="P_ODOB" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_NOM" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="MPP_COUNT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="VALID_START" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID_END" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VLEVEL" sqlType="VARCHAR2" precision="60" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DSO_TSO_NAME" sqlType="VARCHAR2" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DSO_TSO_DISPLAY_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PARTY_NAME" sqlType="VARCHAR2" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PARTY_DISPLAY_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DATEFROM" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DATETO" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="APOINT_HIER2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="HIERNAME" sqlType="CHAR" precision="8" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HIER_LABEL" sqlType="CHAR" precision="17" scale="0" nullable="true" jdbcType="1"/>
+      <column name="NODEID" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="IOBJNM" sqlType="VARCHAR2" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NODENAME" sqlType="VARCHAR2" precision="46" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TLEVEL" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PARENTID" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="MEDIUM_LABEL" sqlType="VARCHAR2" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <column name="LONG_LABEL" sqlType="VARCHAR2" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DATEFROM" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DATETO" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="APOINT_HIER2H2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="HIERNAME" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="HIER_LABEL" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="NODEID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="IOBJNM" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="NODENAME" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="TLEVEL" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PARENTID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="MEDIUM_LABEL" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="LONG_LABEL" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="DATEFROM" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="DATETO" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
+    <table name="APOINT_TEST" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="APOINT" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="VALID_END" sqlType="CHAR" precision="19" scale="0" nullable="true" jdbcType="1"/>
+      <column name="DSO_TSO" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="P_ODOB" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_NOM" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="MPP_COUNT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="TSO_JOIN_APOINT" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="500" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="AUCTION_ATC_FACT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PSTART" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="AUCTION_OFFICE" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ATC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="AUCTION_BID_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BID_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PART_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BID_QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BID_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PART_END" sqlType="CHAR" precision="19" scale="0" nullable="true" jdbcType="1"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CATEGORY_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="AUCTION_OFFICE" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SPLIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ALLOC_MODE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PMETHOD" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ATC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="DOCUMENT_ID" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="AUCTION_SHORT_LABEL" sqlType="VARCHAR2" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PART_START_INT" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="PART_END_INT" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <primary-key name="AUCTION_BID_FACT_PK" columns="AUCTION_ID,BID_ID,PART_START,PARTY"/>
+      <index name="AUCTION_BID_FACT_IND1" unique="true" columns="PART_START,AUCTION_ID"/>
+      <index name="AUCTION_BID_FACT_IND2" unique="true" columns="PART_START,PART_END"/>
+      <index name="AUCTION_BID_FACT_IND3" unique="true" columns="PART_START_INT,PART_END_INT"/>
+    </table>
+    <table name="AUCTION_BID_FACT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BID_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PSTART" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BID_QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BID_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ORIGINAL_PSTART" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ORIGINAL_PEND" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOURS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CATEGORY_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="AUCTION_OFFICE" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SPLIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ALLOC_MODE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PMETHOD" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ATC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE_EMS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="AUCTION_BID_FACT_2013" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BID_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PSTART" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BID_QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BID_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ORIGINAL_PSTART" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ORIGINAL_PEND" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOURS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CATEGORY_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="AUCTION_OFFICE" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SPLIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ALLOC_MODE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PMETHOD" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ATC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE_EMS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="AUCTION_BID_FACT_2014" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BID_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PSTART" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BID_QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BID_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ORIGINAL_PSTART" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ORIGINAL_PEND" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOURS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CATEGORY_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="AUCTION_OFFICE" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SPLIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ALLOC_MODE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PMETHOD" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ATC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE_EMS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="AUCTION_BID_FACT_201401" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BID_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PSTART" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BID_QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BID_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ORIGINAL_PSTART" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ORIGINAL_PEND" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOURS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CATEGORY_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="AUCTION_OFFICE" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SPLIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ALLOC_MODE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PMETHOD" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ATC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE_EMS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="AUCTION_BID_FACT_201402" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PARTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PEND" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="HOURS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BORDER" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CONTRACT_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CATEGORY_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="AUCTION_OFFICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="SPLIT" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ALLOC_MODE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PMETHOD" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ATC" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE_EMS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
+    <table name="AUCTION_BID_FACT_201403" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PARTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PEND" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="HOURS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BORDER" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CONTRACT_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CATEGORY_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="AUCTION_OFFICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="SPLIT" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ALLOC_MODE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PMETHOD" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ATC" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE_EMS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
+    <table name="AUCTION_BID_FACT_201404" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PARTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PEND" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="HOURS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BORDER" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CONTRACT_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CATEGORY_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="AUCTION_OFFICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="SPLIT" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ALLOC_MODE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PMETHOD" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ATC" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE_EMS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
+    <table name="AUCTION_BID_FACT_201405" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PARTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PEND" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="HOURS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BORDER" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CONTRACT_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CATEGORY_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="AUCTION_OFFICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="SPLIT" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ALLOC_MODE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PMETHOD" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ATC" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE_EMS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
+    <table name="AUCTION_BID_FACT_201406" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PARTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PEND" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="HOURS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BORDER" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CONTRACT_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CATEGORY_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="AUCTION_OFFICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="SPLIT" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ALLOC_MODE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PMETHOD" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ATC" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE_EMS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
+    <table name="AUCTION_BID_FACT_201407" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PARTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PEND" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="HOURS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BORDER" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CONTRACT_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CATEGORY_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="AUCTION_OFFICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="SPLIT" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ALLOC_MODE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PMETHOD" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ATC" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE_EMS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
+    <table name="AUCTION_BID_FACT_201408" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PARTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PEND" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="HOURS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BORDER" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CONTRACT_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CATEGORY_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="AUCTION_OFFICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="SPLIT" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ALLOC_MODE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PMETHOD" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ATC" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE_EMS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
+    <table name="AUCTION_BID_FACT_201409" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BID_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PSTART" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BID_QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BID_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ORIGINAL_PSTART" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ORIGINAL_PEND" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOURS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CATEGORY_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="AUCTION_OFFICE" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SPLIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ALLOC_MODE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PMETHOD" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ATC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE_EMS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="AUCTION_BID_FACT_201410" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PARTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PEND" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="HOURS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BORDER" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CONTRACT_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CATEGORY_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="AUCTION_OFFICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="SPLIT" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ALLOC_MODE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PMETHOD" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ATC" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE_EMS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
+    <table name="AUCTION_BID_FACT_201411" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PARTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PEND" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="HOURS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BORDER" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CONTRACT_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CATEGORY_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="AUCTION_OFFICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="SPLIT" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ALLOC_MODE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PMETHOD" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ATC" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE_EMS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
+    <table name="AUCTION_BID_FACT_201412" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PARTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PEND" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="HOURS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BORDER" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CONTRACT_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CATEGORY_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="AUCTION_OFFICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="SPLIT" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ALLOC_MODE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PMETHOD" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ATC" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE_EMS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
+    <table name="AUCTION_BID_FACT_201501" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PARTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PEND" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="HOURS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BORDER" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CONTRACT_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CATEGORY_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="AUCTION_OFFICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="SPLIT" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ALLOC_MODE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PMETHOD" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ATC" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE_EMS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
+    <table name="AUCTION_BID_FACT_201502" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_ID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PARTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BID_PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="QTY" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PRICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PSTART" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ORIGINAL_PEND" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="HOURS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="BORDER" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CONTRACT_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="CATEGORY_TYPE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="AUCTION_OFFICE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="SPLIT" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ALLOC_MODE" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PMETHOD" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="ATC" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="INVOICE_EMS" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
+    <table name="AUCTION_BID_FACT_OUTPUT_TEMP" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BID_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PSTART" sqlType="VARCHAR2" precision="19" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BID_QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BID_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ORIGINAL_PSTART" sqlType="VARCHAR2" precision="19" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ORIGINAL_PEND" sqlType="VARCHAR2" precision="19" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOURS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CATEGORY_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="AUCTION_OFFICE" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SPLIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ALLOC_MODE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PMETHOD" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ATC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE_EMS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <primary-key name="AUCTION_BID_FACT_OUTPUT_TE_PK" columns="PSTART,AUCTION_ID,BID_ID,PARTY"/>
+    </table>
+    <table name="AUCTION_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PART_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="PART_END" sqlType="CHAR" precision="19" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HOURS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CATEGORY_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="AUCTION_OFFICE" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SPLIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ALLOC_MODE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PMETHOD" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ATC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="DOCUMENT_ID" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="AUCTION_SHORT_LABEL" sqlType="VARCHAR2" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="AUCTION_FACT_PK" columns="AUCTION_ID,PART_START"/>
+      <index name="AUCTION_FACT_IND1" unique="true" columns="PART_START,AUCTION_ID"/>
+    </table>
+    <table name="AUCTION_FACT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PSTART" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PEND" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOURS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CATEGORY_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="AUCTION_OFFICE" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SPLIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ALLOC_MODE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PMETHOD" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ATC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="AUCTION_INV_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BID_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12" version="true"/>
+      <column name="PART_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1" version="true"/>
+      <column name="PART_END" sqlType="CHAR" precision="19" scale="0" nullable="true" jdbcType="1" version="true"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ATC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY_INPUT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ATC_INPUT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PRODUCT_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="AUCTION_INV_FACT_PK" columns="AUCTION_ID,BID_ID,PART_START,PARTY"/>
+    </table>
+    <table name="AUCTION_OFFICE" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="J0QnIA=="/>
+      <primary-key name="AUCTION_OFFICE_PK" columns="PARTY"/>
+    </table>
+    <table name="AUCTION_OFFICE2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DISPLAY_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+    </table>
+    <table name="AUCTION_ORGANISATION" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="AUCTION_OFFICE" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="BORDER1" sqlType="CHAR" precision="2" scale="0" nullable="false" jdbcType="1"/>
+      <column name="VALID_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1" def="JzIwMTItMTItMzEgMjM6MDA6MDAn"/>
+      <column name="VALID_END" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1" def="JzI5OTktMDEtMDEgMDA6MDA6MDAn"/>
+      <column name="CONTRACT_TYPE1" sqlType="VARCHAR2" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="SPLIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ALLOC_MODE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PRICE_METHOD" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <primary-key name="AUCTION_ORGANIZATION_PK" columns="BORDER1,AUCTION_OFFICE,VALID_START,CONTRACT_TYPE1"/>
+    </table>
+    <table name="AUCTION_PARTY2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DISPLAY_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="AUCTION_REGISTRATION" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1" def="JzEwWENTLVNFUkJJQVRTTzgn"/>
+      <column name="AUCTION_OFFICE" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BORDER1" sqlType="CHAR" precision="2" scale="0" nullable="false" jdbcType="1"/>
+      <column name="VALID_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="VALID_END" sqlType="CHAR" precision="19" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CONTRACT_TYPE1" sqlType="VARCHAR2" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="COUPLE" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="AUCTION_REGISTRATION_PK" columns="VALID_START,BORDER1,CONTRACT_TYPE1,AUCTION_OFFICE,PARTY"/>
+    </table>
+    <table name="AUCTION_REGISTRATION2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="COUPLE" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="AUCTION_OFFICE" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="TYPE" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID_START" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID_END" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="AUCTION_REVENUE_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PSTART" sqlType="VARCHAR2" precision="19" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="false" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="false" jdbcType="1"/>
+      <column name="INVOICE_EMS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <primary-key name="AUCTION_REVENUE_FACT_PK" columns="PSTART,BORDER,CONTRACT_TYPE"/>
+    </table>
+    <table name="AUCTION_REVENUE_FACT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PSTART" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="false" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="false" jdbcType="1"/>
+      <column name="INVOICE_EMS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="AUCTION_TEMP" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="DOCUMENT_ID" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SENDER_ID" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BID_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BIDDING_PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="IN_AREA" sqlType="VARCHAR2" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="OUT_AREA" sqlType="VARCHAR2" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="INTERVAL_START" sqlType="CHAR" precision="19" scale="0" nullable="true" jdbcType="1"/>
+      <column name="INTERVAL_END" sqlType="CHAR" precision="19" scale="0" nullable="true" jdbcType="1"/>
+      <column name="BORDER" sqlType="VARCHAR2" precision="6" scale="0" nullable="true" jdbcType="12"/>
+      <column name="RESOLUTION" sqlType="VARCHAR2" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="POS" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PRICE_AMOUNT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BID_QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BID_PRICE_AMOUNT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CURRENCY" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="INVOICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="HOURS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CREATION_DATE_TIME" sqlType="VARCHAR2" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="VARCHAR2" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="MEASURE_UNIT_PRICE" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="AUCTION_TRANSFER_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="TRANSFER_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PERIOD_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="PERIOD_END" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="REQUEST_DATE" sqlType="CHAR" precision="10" scale="0" nullable="false" jdbcType="1"/>
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="TRANSFEROR" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="TRANSFEREE" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <primary-key name="AUCTION_TRANSFER_PK" columns="TRANSFER_ID,PERIOD_START"/>
+    </table>
+    <table name="AUCTION_TRANSFER_FACT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="TRANSFER_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PSTART" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PEND" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="REQUESTE_DATE" sqlType="VARCHAR2" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="TRANSFEROR" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="TRANSFEREE" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="TIME_INTERVAL" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CATEGORY_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="AUCTION_OFFICE" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SPLIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PMETHOD" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+    </table>
+    <table name="BALANCE_ENTITY" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ENTITY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="J0QnIA=="/>
+      <primary-key name="BALANCE_ENTITY_PK" columns="PARTY,ENTITY"/>
+    </table>
+    <table name="BALANCE_ENTITY2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="ENTITY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="PARTY_NAME" sqlType="VARCHAR2" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PARTY_DISPLAY_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="BALANCE_ENTITY_HIER2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="HIERNAME" sqlType="CHAR" precision="16" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HIER_LABEL" sqlType="CHAR" precision="16" scale="0" nullable="true" jdbcType="1"/>
+      <column name="NODEID" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="IOBJNM" sqlType="VARCHAR2" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NODENAME" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PARTY_NODENAME" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TLEVEL" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PARENTID" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="MEDIUM_LABEL" sqlType="VARCHAR2" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHORT_LABEL" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="BALANCING_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PERIOD_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="DATUM" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ENTITY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="REG_TYPE" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="QTY_UP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY_DOWN" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ENTITY_QTY_UP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ENTITY_QTY_DOWN" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PARTY_QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="DEBIT_UNIT_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CREDIT_UNIT_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_DEBIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_CREDIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BOFFER_ID" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BOFFER_QTY_START" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <primary-key name="BALANCING_FACT_PK" columns="PERIOD_START,REG_TYPE,PARTY,ENTITY,BOFFER_QTY_START"/>
+    </table>
+    <table name="BALANCING_FACT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PERIOD_START" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DATUM" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ENTITY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="REG_TYPE" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="QTY_UP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY_DOWN" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="DEBIT_UNIT_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CREDIT_UNIT_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_DEBIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_CREDIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BOFFER_QTY_START" sqlType="VARCHAR2" precision="11" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CP_INPUT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CP_CALC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CP_CALC_UNCUT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="BALANCING_OFFER_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="BOFFER_ID" sqlType="VARCHAR2" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="REG_TYPE" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="ENTITY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12" def="JyUnIA=="/>
+      <column name="DATE_START" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="DATE_END" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="PERIOD_START" sqlType="VARCHAR2" precision="19" scale="0" nullable="false" jdbcType="12" def="JyUnIA=="/>
+      <column name="QTY_START" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="QTY_END" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="DEBIT_UNIT_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3" def="MCA="/>
+      <column name="CREDIT_UNIT_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3" def="MCA="/>
+      <column name="SUBMIT_TIME" sqlType="CHAR" precision="19" scale="0" nullable="true" jdbcType="1"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="J0QnIA=="/>
+      <column name="VERSION" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <primary-key name="TABLE1_PK" columns="BOFFER_ID,REG_TYPE,PARTY,ENTITY,PERIOD_START,QTY_START"/>
+    </table>
+    <table name="BALANCING_OFFER_FACT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="DATUM" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="PERIOD_START" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="QTY_START" sqlType="VARCHAR2" precision="12" scale="0" nullable="true" jdbcType="12"/>
+      <column name="QTY_END" sqlType="VARCHAR2" precision="12" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DEBIT_UNIT_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="CREDIT_UNIT_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="BOFFER_ID" sqlType="VARCHAR2" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="REG_TYPE" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SUBMIT_TIME" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="ACTUAL_QTY_UP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ACTUAL_QTY_DOWN" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ACTUAL_DEBIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ACTUAL_CREDIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="RANGE" sqlType="VARCHAR2" precision="28" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="BALANCING_PARAMS_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PSTART" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="DATUM" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="K1" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="K2" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="E1" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="E2" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="D" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="C" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BOFFER_BORDER1" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BOFFER_BORDER2" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CP_INPUT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CP_CALC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CP_CALC_UNCUT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <primary-key name="BALANCING_PARAMS_FACT_PK" columns="PSTART"/>
+    </table>
+    <table name="BALANCING_PARAMS_FACT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PSTART" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="K1" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="K2" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="E1" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="E2" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="D" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="C" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BOFFER_BORDER1" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BOFFER_BORDER2" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CP_INPUT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CP_CALC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CP_CALC_UNCUT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="BALANCING_PARTY2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DISPLAY_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="BALANCING_TEMP" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="DATUM" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="PSTART" sqlType="VARCHAR2" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="REASON" sqlType="VARCHAR2" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12" version="true"/>
+      <column name="ENTITY" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12" version="true"/>
+      <column name="ENTITY_QTY_UP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ENTITY_QTY_DOWN" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PARTY_QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY_UP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY_DOWN" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="REG_TYPE" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="PARTY_QTY_UP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PARTY_QTY_DOWN" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="DEBIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CREDIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="BEU_INPUT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PSTART" sqlType="VARCHAR2" precision="19" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="UNIT_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="BORDER" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="false" jdbcType="1"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="FROM_AREA" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="TO_AREA" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="SORTID" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="J0QnCiAgIA=="/>
+      <column name="COUNTRY_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="COUNTRY" sqlType="CHAR" precision="2" scale="0" nullable="false" jdbcType="1"/>
+      <primary-key name="BORDER_PK" columns="BORDER"/>
+      <index name="BORDER_INDEX_AREAS" unique="true" columns="FROM_AREA,TO_AREA"/>
+    </table>
+    <table name="BORDER2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="false" jdbcType="1"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="FROM_AREA" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="TO_AREA" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="SORTID" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+    </table>
+    <table name="BORDER_HIER2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="HIERNAME" sqlType="CHAR" precision="8" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HIER_LABEL" sqlType="CHAR" precision="7" scale="0" nullable="true" jdbcType="1"/>
+      <column name="NODEID" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="IOBJNM" sqlType="VARCHAR2" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NODENAME" sqlType="VARCHAR2" precision="4" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TLEVEL" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PARENTID" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="MEDIUM_LABEL" sqlType="VARCHAR2" precision="200" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="BORDER_TECHNICAL" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="false" jdbcType="1"/>
+      <column name="VALID_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="VALID_END" sqlType="CHAR" precision="19" scale="0" nullable="true" jdbcType="1"/>
+      <column name="TTC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="TRM" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="NTC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AAC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ATC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AAC_GODISNJI" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PLANIRANI_BROJ_CASOVA" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+    </table>
+    <table name="BORDER_TECHNICAL_FACT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="false" jdbcType="1"/>
+      <column name="PSTART" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TTC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="TRM" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="NTC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="BOS" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="VALID_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1" def="JzE5MDAtMDEtMDEgMDA6MDA6MDAnIA=="/>
+      <column name="VALID_END" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1" def="JzI5OTktMDEtMDEgMDA6MDA6MDAnIA=="/>
+      <column name="TRP" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="J04nIA=="/>
+      <column name="PRP" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="J04nIA=="/>
+      <column name="CRP" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="J04nIA=="/>
+      <primary-key name="BOS_PK" columns="PARTY,VALID_START"/>
+    </table>
+    <table name="BOS2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="true" jdbcType="1"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DISPLAY_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TRP" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PRP" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CRP" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="VALID_START" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID_END" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DATEFROM" sqlType="VARCHAR2" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DATETO" sqlType="VARCHAR2" precision="32" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="BOS_RISK_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="VALID_START" sqlType="CHAR" precision="10" scale="0" nullable="false" jdbcType="1"/>
+      <column name="VALID_END" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="D" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="C" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P1" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P2" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P3" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="R" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <primary-key name="BOS_RISK_FACT_PK" columns="PARTY,VALID_START"/>
+    </table>
+    <table name="BOS_RISK_FACT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="VALID_START" sqlType="VARCHAR2" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID_END" sqlType="VARCHAR2" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="D" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="C" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P1" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P2" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P3" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="R" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="DATUM" sqlType="VARCHAR2" precision="32" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="BOS_SECURITY_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="INSTRUMENT" sqlType="VARCHAR2" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VALID_START" sqlType="CHAR" precision="10" scale="0" nullable="false" jdbcType="1"/>
+      <column name="VALID_END" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="AMT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <primary-key name="BOS_SECURITY_FACT_PK" columns="PARTY,INSTRUMENT,VALID_START"/>
+    </table>
+    <table name="BOS_SECURITY_FACT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="INSTRUMENT" sqlType="VARCHAR2" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VALID_START" sqlType="VARCHAR2" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID_END" sqlType="VARCHAR2" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="AMT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="DATUM" sqlType="VARCHAR2" precision="32" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="CATEGORY_TYPE" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="CATEGORY_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="false" jdbcType="1"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1" def="J0QnCiAgIA=="/>
+      <primary-key name="CATEGORY_TYPE_PK" columns="CATEGORY_TYPE"/>
+    </table>
+    <table name="CATEGORY_TYPE2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="CATEGORY_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="false" jdbcType="1"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+    </table>
+    <table name="COMPENSATION_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PSTART" sqlType="VARCHAR2" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="COM_VALUE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="OBLAST" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CENA" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="COMP_TYPE" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="COMP" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DISPLAY_NAME" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="CONTRACT_TYPE" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="false" jdbcType="1"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TIMEFRAMES" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TYPE" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SORTID" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1" def="J0QnCiAgIA=="/>
+      <primary-key name="CONTRACT_TYPE_PK" columns="CONTRACT_TYPE"/>
+    </table>
+    <table name="CONTRACT_TYPE2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="false" jdbcType="1"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TIMEFRAMES" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TYPE" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SORTID" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+    </table>
+    <table name="CONTRACT_TYPE_HIER2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="HIERNAME" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="HIER_LABEL" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="NODEID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="IOBJNM" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="NODENAME" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="TLEVEL" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PARENTID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="MEDIUM_LABEL" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
+    <table name="CP_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="DATUM" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12" version="true"/>
+      <column name="HOUR" sqlType="VARCHAR2" precision="20" scale="0" nullable="false" jdbcType="12" version="true"/>
+      <column name="PSTART" sqlType="VARCHAR2" precision="19" scale="0" nullable="false" jdbcType="12" version="true"/>
+      <column name="BES" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BET" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BETS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BEU" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CP_INPUT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3" version="true"/>
+      <primary-key name="CP_INPUT_TEMP_PK" columns="DATUM,HOUR,PSTART"/>
+    </table>
+    <table name="DATUM2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="DATUM_INTERNAL" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="DATUM" sqlType="VARCHAR2" precision="32" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="DERP" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="DATUM" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CENA" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="DSO_TSO" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VLEVEL" sqlType="VARCHAR2" precision="60" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="J0QnIA=="/>
+      <primary-key name="DSO_PK" columns="PARTY"/>
+    </table>
+    <table name="DSO_TSO2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DISPLAY_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VLEVEL" sqlType="VARCHAR2" precision="60" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+    </table>
+    <table name="DSO_TSO_HIER2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="HIERNAME" sqlType="CHAR" precision="9" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HIER_LABEL" sqlType="CHAR" precision="7" scale="0" nullable="true" jdbcType="1"/>
+      <column name="NODEID" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="IOBJNM" sqlType="VARCHAR2" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NODENAME" sqlType="VARCHAR2" precision="46" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TLEVEL" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PARENTID" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="MEDIUM_LABEL" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="LONG_LABEL" sqlType="VARCHAR2" precision="250" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="EX_RATE" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="GDATUM" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="FCUR" sqlType="VARCHAR2" precision="5" scale="0" nullable="false" jdbcType="12"/>
+      <column name="TCUR" sqlType="VARCHAR2" precision="5" scale="0" nullable="false" jdbcType="12"/>
+      <column name="UKURS" sqlType="NUMBER" precision="9" scale="5" nullable="false" jdbcType="3"/>
+      <primary-key name="EX_RATE_PK" columns="GDATUM,FCUR,TCUR"/>
+    </table>
+    <table name="HOUR2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="HOUR_LABEL" sqlType="VARCHAR2" precision="6" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOUR_MEDIUM_LABEL" sqlType="VARCHAR2" precision="3" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOUR_SHORT_LABEL" sqlType="VARCHAR2" precision="3" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="IMBALANCE_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="PERIOD_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="DATUM" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="P_UVOZ" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_IZVOZ" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_KUP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_PROD" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_PROIZV" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_POT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="UPP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="O_PROIZV" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="O_POT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BES" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BET" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BETS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BEN" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="OBOS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="POB" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="OBOSP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="K1" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="K2" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="C" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="E1" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="E2" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_DEBIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_CREDIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="UOP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_DEBIT_SCHED" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_CREDIT_SCHED" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_DEBIT_IMBAL" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_CREDIT_IMBAL" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_DEBIT_COMP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_CREDIT_COMP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="KP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_POT2" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <primary-key name="IMBALANCE_FACT_PK" columns="PARTY,PERIOD_START"/>
+    </table>
+    <table name="IMBALANCE_FACT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="PERIOD_START" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DATUM" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="P_UVOZ" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_IZVOZ" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_KUP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_PROD" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_PROIZV" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_POT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="UPP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="O_PROIZV" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="O_POT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="UOP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BES" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BET" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BETS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BEN" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="OBOS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="POB" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="OBOSP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_DEBIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_CREDIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_DEBIT_SCHED" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_CREDIT_SCHED" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_DEBIT_IMBAL" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_CREDIT_IMBAL" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_DEBIT_COMP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_CREDIT_COMP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="KP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CP_INPUT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CP_CALC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CP_CALC_UNCUT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="INADVERTENT_DEVIATIONS_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="TARIFF" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PSTART" sqlType="VARCHAR2" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="COMP_TYPE" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DEV_FREQ" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="DEV_VALUE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="EXC_VALUE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="JELENA_PLANIRANO_OSTVARENO" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PSTART" sqlType="VARCHAR2" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PLANIRANO" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="OSTVARENO" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <primary-key name="JELENA_PLANIRANO_OSTVARENO_PK" columns="PSTART"/>
+    </table>
+    <table name="LOAD_SCHEDULE" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="FILE_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="DIR_NAME" sqlType="VARCHAR2" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="DATA_TYPE" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SKIP" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3" def="MAogICA="/>
+      <primary-key name="LOAD_SCHEDULE_PK" columns="DIR_NAME,FILE_NAME"/>
+    </table>
+    <table name="MERIT_ORDER_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="LIST_ID" sqlType="VARCHAR2" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="REG_TYPE" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ENTITY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VALID_START" sqlType="VARCHAR2" precision="19" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VALID_END" sqlType="VARCHAR2" precision="19" scale="0" nullable="true" jdbcType="12"/>
+      <column name="QTY_START" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="QTY_END" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="DEBIT_UNIT_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CREDIT_UNIT_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="SUBMIT_TIME" sqlType="VARCHAR2" precision="19" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="ORDER_NUM" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="MERIT_ORDER_FACT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ENTITY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VALID_START" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID_END" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="QTY_START" sqlType="VARCHAR2" precision="12" scale="0" nullable="true" jdbcType="12"/>
+      <column name="QTY_END" sqlType="VARCHAR2" precision="12" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DEBIT_UNIT_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CREDIT_UNIT_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="LIST_ID" sqlType="VARCHAR2" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="REG_TYPE" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SUBMIT_TIME" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="ACTUAL_QTY_UP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ACTUAL_QTY_DOWN" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ACTUAL_DEBIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ACTUAL_CREDIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="RANGE" sqlType="VARCHAR2" precision="28" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ORDER_NUM" sqlType="VARCHAR2" precision="3" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="METERED_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="APOINT" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PERIOD_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="DATUM" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="DOCID" sqlType="VARCHAR2" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VTYPE" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SENDER" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <index name="METERED_FACT_PK" unique="true" columns="APOINT,PERIOD_START,VTYPE,DOCID"/>
+    </table>
+    <table name="METERED_FACT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="APOINT" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PERIOD_START" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DATUM" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="DOCID" sqlType="VARCHAR2" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VTYPE" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="O_PROIZV" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="O_POT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="MPP_COUNT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_NOM" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_ODOB" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="DSO_TSO" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="METERED_TEMP" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="DOCUMENT_ID" sqlType="VARCHAR2" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ENTITY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="INTERVAL_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="INQTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="OUTQTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="PARTY" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DISPLAY_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="J0QnIA=="/>
+      <column name="VALID_FROM" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID_TO" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PARTY_PK" columns="PARTY"/>
+      <index name="PARTY_DISPLAY_NAME" unique="true" columns="DISPLAY_NAME"/>
+    </table>
+    <table name="PRICE_METHOD" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PMETHOD" sqlType="VARCHAR2" precision="1" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VALID" sqlType="VARCHAR2" precision="1" scale="0" nullable="false" jdbcType="12" def="J0QnICAgICAgICAgICAgICAgICAgIA=="/>
+      <primary-key name="PRICE_METHOD_PK" columns="PMETHOD"/>
+    </table>
+    <table name="PRICE_METHOD2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PMETHOD" sqlType="VARCHAR2" precision="1" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VALID" sqlType="VARCHAR2" precision="1" scale="0" nullable="false" jdbcType="12"/>
+    </table>
+    <table name="PROVERA_BES" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PERIOD_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="DATUM" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="QTY_UP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY_DOWN" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_DEBIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="DEBIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_CREDIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CREDIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="PROVERA_CP_CALC" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PSTART" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="CP_INPUT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CP_CALC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="CP_CALC_UNCUT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="PROVERA_RIZIKA" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="DATUM" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="UVOZ" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="KUPOVINA" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P3" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P1" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P2" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="PROVERA_RIZIKA_SUM" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="VALID_START" sqlType="CHAR" precision="10" scale="0" nullable="false" jdbcType="1"/>
+      <column name="VALID_END" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="D" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="C" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P1" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P2" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P3" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="R" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="PROVER_BO" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PARTY" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1"/>
+      <column name="PERIOD_START" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DATUM" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="P_UVOZ" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_IZVOZ" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_KUP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_PROD" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_PROIZV" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_POT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="UPP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="O_PROIZV" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="O_POT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="UOP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BES" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BET" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BETS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BEN" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="OBOS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="POB" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="OBOSP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_DEBIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_CREDIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_DEBIT_SCHED" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_CREDIT_SCHED" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_DEBIT_IMBAL" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_CREDIT_IMBAL" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_DEBIT_COMP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="AMT_CREDIT_COMP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="KP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="REG_TYPE" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="REG_TYPE" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SPEED" sqlType="VARCHAR2" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="REGULATION" sqlType="VARCHAR2" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="REASON" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="J0QnICAgICAgICAgICAgICAgICAgIA=="/>
+      <primary-key name="REG_TYPE_PK" columns="REG_TYPE"/>
+    </table>
+    <table name="REG_TYPE2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="REG_TYPE" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SPEED" sqlType="VARCHAR2" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="REGULATION" sqlType="VARCHAR2" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="REASON" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALID" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="MEDIUM_LABEL" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="LONG_LABEL" sqlType="VARCHAR2" precision="203" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="REG_TYPE_HIER2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="HIERNAME" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HIER_LABEL" sqlType="CHAR" precision="14" scale="0" nullable="true" jdbcType="1"/>
+      <column name="NODEID" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="IOBJNM" sqlType="VARCHAR2" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NODENAME" sqlType="VARCHAR2" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TLEVEL" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PARENTID" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="MEDIUM_LABEL" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="LONG_LABEL" sqlType="VARCHAR2" precision="203" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="SCHEDULED_EXCHANGE_TEMP" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="DOCUMENT_ID" sqlType="VARCHAR2" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ENTITY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="INTERVAL_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="INQTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="OUTQTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BUSINESS_TYPE" sqlType="VARCHAR2" precision="38" scale="0" nullable="false" jdbcType="12"/>
+    </table>
+    <table name="SCHEDULE_FACT" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PERIOD_START" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="DATUM" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="DOCID" sqlType="VARCHAR2" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VTYPE" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <primary-key name="SCHEDULE_FACT_PK" columns="PARTY,PERIOD_START,VTYPE,DOCID"/>
+    </table>
+    <table name="SCHEDULE_FACT2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PERIOD_START" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DATUM" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="DOCID" sqlType="VARCHAR2" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="VTYPE" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_UVOZ" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_IZVOZ" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_KUP" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_PROD" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_PROIZV" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="P_POT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="TEST1" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BID_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PSTART" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BID_QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BID_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ORIGINAL_PSTART" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ORIGINAL_PEND" sqlType="VARCHAR2" precision="59" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOURS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CATEGORY_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="AUCTION_OFFICE" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SPLIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ALLOC_MODE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PMETHOD" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ATC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE_EMS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="TEST2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="AUCTION_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BID_ID" sqlType="VARCHAR2" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PSTART" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PARTY" sqlType="VARCHAR2" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BID_QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BID_PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="QTY" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PRICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ORIGINAL_PSTART" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ORIGINAL_PEND" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOURS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="BORDER" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CONTRACT_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CATEGORY_TYPE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="AUCTION_OFFICE" sqlType="VARCHAR2" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SPLIT" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="ALLOC_MODE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PMETHOD" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ATC" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="INVOICE_EMS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+    </table>
+    <table name="TIME" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="PSTART" sqlType="CHAR" precision="19" scale="0" nullable="false" jdbcType="1"/>
+      <column name="PEND" sqlType="CHAR" precision="19" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PSTART_RS" sqlType="CHAR" precision="19" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PEND_RS" sqlType="CHAR" precision="19" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ZONEDIFF" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="HOUR_LABEL" sqlType="VARCHAR2" precision="6" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DATUM" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="DATUM_LABEL" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="WEEKDAY" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="WEEKDAY_LABEL" sqlType="VARCHAR2" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="MONTH" sqlType="CHAR" precision="6" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MONTH_LABEL" sqlType="VARCHAR2" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="QUARTER" sqlType="CHAR" precision="6" scale="0" nullable="true" jdbcType="1"/>
+      <column name="QUARTER_LABEL" sqlType="VARCHAR2" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="YEAR_LABEL" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="DAYOFMONTH" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="DAYOFYEAR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="PSTART_INT" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <primary-key name="TIME_PK" columns="PSTART"/>
+      <index name="TIME_IND1" unique="true" columns="PSTART_INT"/>
+    </table>
+    <table name="TIME2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="PSTART" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PEND" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PSTART_RS" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PEND_RS" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ZONEDIFF" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="HOUR" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="HOUR_LABEL" sqlType="VARCHAR2" precision="6" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DATUM" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DATUM_LABEL" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <column name="WEEKDAY" sqlType="NUMBER" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <column name="WEEKDAY_LABEL" sqlType="VARCHAR2" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="MONTH" sqlType="CHAR" precision="6" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MONTH_LABEL" sqlType="VARCHAR2" precision="17" scale="0" nullable="true" jdbcType="12"/>
+      <column name="QUARTER" sqlType="CHAR" precision="6" scale="0" nullable="true" jdbcType="1"/>
+      <column name="QUARTER_LABEL" sqlType="VARCHAR2" precision="15" scale="0" nullable="true" jdbcType="12"/>
+      <column name="YEAR_LABEL" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+    </table>
+    <table name="TIME_HIER2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="HIERNAME" sqlType="CHAR" precision="6" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HIER_LABEL" sqlType="CHAR" precision="5" scale="0" nullable="true" jdbcType="1"/>
+      <column name="NODEID" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="IOBJNM" sqlType="VARCHAR2" precision="11" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NODENAME" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TLEVEL" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="PARENTID" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="MEDIUM_LABEL" sqlType="VARCHAR2" precision="17" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="VTYPE" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="VTYPE" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TYPE" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="VTYPE_PK" columns="VTYPE"/>
+    </table>
+    <table name="VTYPE2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="VTYPE" sqlType="NUMBER" precision="38" scale="0" nullable="false" jdbcType="3"/>
+      <column name="NAME" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TYPE" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="VTYPE_HIER2" schema="BOBJ_DWH" catalog="" type="VIEW">
+      <column name="HIERNAME" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="HIER_LABEL" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="NODEID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="IOBJNM" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="NODENAME" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="TLEVEL" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="PARENTID" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+      <column name="MEDIUM_LABEL" sqlType="UNDEFINED" precision="0" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
+    <table name="ZS_ORGJED" schema="BOBJ_DWH" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SIFRA" sqlType="VARCHAR2" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ZS_ORGJED" sqlType="NUMBER" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="NAZIV" sqlType="VARCHAR2" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ADRESA" sqlType="VARCHAR2" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="MESTO" sqlType="NUMBER" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="POSTA" sqlType="VARCHAR2" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TELEFON" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="FAX" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ZS_KOMITENT" sqlType="NUMBER" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="ZS_ORGJEDTIP" sqlType="NUMBER" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="VALIDAN" sqlType="VARCHAR2" precision="1" scale="0" nullable="false" jdbcType="12" def="J0QnICAgICAgICAgICAgICAgICAgIA=="/>
+      <column name="NIVO" sqlType="NUMBER" precision="10" scale="2" nullable="true" jdbcType="3"/>
+      <column name="OZNAKA" sqlType="VARCHAR2" precision="15" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ID_OLD" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="X_ORNIVO1" sqlType="VARCHAR2" precision="4" scale="0" nullable="false" jdbcType="12" def="JzAwJyAgICAgICAgICAgICAgICAgIA=="/>
+      <column name="X_NAZIV" sqlType="VARCHAR2" precision="1000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="OPIS" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="X_ID" sqlType="NUMBER" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="X_PARENT" sqlType="NUMBER" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="X_NIVO" sqlType="NUMBER" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="ZS_DELATNOST" sqlType="NUMBER" precision="10" scale="0" nullable="true" jdbcType="3" def="LTEK"/>
+    </table>
+    <procedure name="CONCAT3" schema="BOBJ_DWH" catalog="" type="2" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24=">
+      <prototype>
+        <parameter name="P1" sqlType="VARCHAR2" precision="32767" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="P2" sqlType="VARCHAR2" precision="32767" scale="0" nullable="true" jdbcType="12" type="1" index="2"/>
+        <parameter name="P3" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3" type="1" index="3"/>
+        <parameter name="" sqlType="VARCHAR2" precision="32767" scale="0" nullable="true" jdbcType="12" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="ETL_AUCTIONS" schema="BOBJ_DWH" catalog="" type="1" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24="/>
+    <procedure name="ETL_AUCTIONS_OLD" schema="BOBJ_DWH" catalog="" type="1" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24="/>
+    <procedure name="ETL_AUKCIJE_NEW" schema="BOBJ_DWH" catalog="" type="1" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24="/>
+    <procedure name="ETL_BOBM" schema="BOBJ_DWH" catalog="" type="1" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24="/>
+    <procedure name="ETL_BOBM_BALANCE" schema="BOBJ_DWH" catalog="" type="1" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24="/>
+    <procedure name="ETL_BOBM_IMBALANCE" schema="BOBJ_DWH" catalog="" type="1" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24="/>
+    <procedure name="ETL_BOBM_METERED_SCHEDULED" schema="BOBJ_DWH" catalog="" type="1" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24="/>
+    <procedure name="ETL_BOBM_RISK" schema="BOBJ_DWH" catalog="" type="1" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24="/>
+    <procedure name="INSERT_METERED_TYPLES" schema="BOBJ_DWH" catalog="" type="1" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24="/>
+    <procedure name="INSERT_SCHEDULE_TYPLES" schema="BOBJ_DWH" catalog="" type="1" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24="/>
+    <procedure name="INSERT_TARD_TYPLES" schema="BOBJ_DWH" catalog="" type="1" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24="/>
+    <procedure name="IOV" schema="BOBJ_DWH" catalog="" type="2" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24=">
+      <prototype>
+        <parameter name="L" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3" type="1" index="1"/>
+        <parameter name="V" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3" type="1" index="2"/>
+        <parameter name="" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="RTRIM2" schema="BOBJ_DWH" catalog="" type="2" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24=">
+      <prototype>
+        <parameter name="P1" sqlType="VARCHAR2" precision="32767" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="" sqlType="VARCHAR2" precision="32767" scale="0" nullable="true" jdbcType="12" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="STRIP_DATUM" schema="BOBJ_DWH" catalog="" type="2" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24=">
+      <prototype>
+        <parameter name="PSTART" sqlType="VARCHAR2" precision="32767" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="" sqlType="VARCHAR2" precision="32767" scale="0" nullable="true" jdbcType="12" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="STRIP_PSTART" schema="BOBJ_DWH" catalog="" type="2" remarks="U3RhbmRhbG9uZSBwcm9jZWR1cmUgb3IgZnVuY3Rpb24=">
+      <prototype>
+        <parameter name="PSTART" sqlType="VARCHAR2" precision="32767" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="" sqlType="VARCHAR2" precision="32767" scale="0" nullable="true" jdbcType="12" type="5" index="0"/>
+      </prototype>
+    </procedure>
+  </data-source>
+</component>
