@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Oracle -" uuid="34607937-2d4a-4efb-8984-d457c8c90181">
+      <secret-storage>master_key</secret-storage>
+      <schema-pattern>*.BOBJ_DWH</schema-pattern>
+      <default-schemas>*.BOBJ_DWH *.SYS *.SYSTEM</default-schemas>
+    </data-source>
+  </component>
+</project>
